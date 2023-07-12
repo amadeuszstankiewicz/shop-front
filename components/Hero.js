@@ -1,14 +1,20 @@
+import Figurine from "./Figurine";
 
 
 export default function Hero() {
 
 
     return (
-        <div className="w-full min-h-screen z-0">
-            <div className="hero-image-container w-fit h-fit relative mx-auto">
-                <img className="max-h-screen w-auto" src="/images/hero-bg.png" />
-                <img className="absolute top-0 right-0 h-3/4 w-auto" src="/images/hero-dragon.png" />
-                <div className="absolute w-full max-w-[830px] px-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <>
+            <div className="relative">
+                <div className="relative w-full min-h-screen z-0 flex items-center">
+                    <div className="container hero-image-container w-fit h-fit relative mx-auto z-1">
+                        <img className="max-h-screen w-auto" src="/images/hero-bg.png" />
+                        <img className="absolute top-0 right-0 h-3/4 w-auto" src="/images/hero-dragon.png" />
+                    </div>
+                </div>
+
+                <div className="absolute w-full max-w-[830px] px-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-lg z-50">
                     <h1 className="text-white text-center text-5xl font-bold mb-5">
                         The Fantasy world awaits you
                     </h1>
@@ -19,6 +25,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-        </div>
+            <Figurine />
+        </>
     )
 }
