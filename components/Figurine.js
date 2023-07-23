@@ -14,7 +14,7 @@ export default function Figurine() {
         setShowColorpicker(false)
     }
     return (
-        <div className="fixed h-full w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+        <div className="fixed hidden h-full w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 lg:block">
             <FigurineModel figurineColor={figurineColor}/>
             {showColorpicker ?
                     <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>

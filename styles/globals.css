@@ -2,7 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  width: 8px;
+  background: white;
+}
+body::-webkit-scrollbar-thumb {
+  background: #7ac8c8;
+  height:30px;
+}
+
+body::-webkit-scrollbar-track-piece
+{
+   display:none;
+}
+
 body {
   background-color: #0d1919;
   overflow-x: hidden;
+}
+
+
+.custom-text-shadow {
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 1);
 }
