@@ -1,4 +1,5 @@
 import Figurine from "./Figurine";
+import DecorationImage from "./utils/DecorationImage";
 
 
 export default function Hero() {
@@ -24,6 +25,18 @@ export default function Hero() {
                         Its quality is thoroughly checked multiple times at every stage of production
                     </div>
                 </div>
+
+                <DecorationImage
+                    x={9} y={19} 
+                    w={150} h={150} 
+                    content="amulet_1.png"
+                    />
+
+                <DecorationImage
+                    x={80} y={74} 
+                    w={150} h={150} 
+                    content="shield_2.png"
+                    />
             </div>
             <Figurine />
         </>

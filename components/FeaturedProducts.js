@@ -8,11 +8,11 @@ export default function FeaturedProducts() {
 
     const responsive = {
         largeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
+            breakpoint: { max: 5000, min: 1536 },
+            items: 4
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 1535, min: 1024 },
             items: 3
         },
         tablet: {
@@ -34,10 +34,17 @@ export default function FeaturedProducts() {
             
             <div className="container mx-auto">
                 <Carousel 
+                    className="justify-content-center"
                     responsive={responsive}
                     swipeable={isSmallScreen}
                     draggable={isSmallScreen}>
                         
+                    <ProductBrick />
+                    <ProductBrick />
+                    <ProductBrick />
+                    <ProductBrick />
+                    <ProductBrick />
+                    <ProductBrick />
                     <ProductBrick />
                     <ProductBrick />
                     <ProductBrick />
