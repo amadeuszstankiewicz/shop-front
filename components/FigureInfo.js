@@ -84,17 +84,18 @@ export default function FigureInfo() {
                       The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                       Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
                       Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                  
+                      <DecorationImage
+                        x={300} y={22} 
+                        w={150} h={150} 
+                        content="amulet_2.png"
+                      />
+                      <DecorationImage
+                        x={250} y={105} 
+                        w={150} h={150} 
+                        content="axe_2.png"
+                        />
                   </div>
-                  <DecorationImage
-                      x={55} y={22} 
-                      w={150} h={150} 
-                      content="amulet_2.png"
-                      />
-                  <DecorationImage
-                      x={75} y={110} 
-                      w={150} h={150} 
-                      content="axe_2.png"
-                      />
                 </motion.div>
             </motion.div>
             <motion.div
@@ -110,17 +111,17 @@ export default function FigureInfo() {
                       The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                       Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
                       Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                      <DecorationImage
+                        x={-125} y={10} 
+                        w={150} h={150} 
+                        content="amulet_3.png"
+                        />
+                      <DecorationImage
+                        x={-200} y={85} 
+                        w={150} h={150} 
+                        content="potion_1.png"
+                        />
                   </div>
-                  <DecorationImage
-                      x={-25} y={10} 
-                      w={150} h={150} 
-                      content="amulet_3.png"
-                      />
-                  <DecorationImage
-                      x={-50} y={85} 
-                      w={150} h={150} 
-                      content="potion_1.png"
-                      />
                 </motion.div>
             </motion.div>
             <motion.div
@@ -136,17 +137,17 @@ export default function FigureInfo() {
                       The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                       Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
                       Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                      <DecorationImage
+                        x={310} y={10} 
+                        w={150} h={150} 
+                        content="shield_1.png"
+                        />
+                      <DecorationImage
+                        x={195} y={75} 
+                        w={150} h={150} 
+                        content="helmet_1.png"
+                        />
                   </div>
-                  <DecorationImage
-                      x={75} y={10} 
-                      w={150} h={150} 
-                      content="shield_1.png"
-                      />
-                  <DecorationImage
-                      x={58} y={75} 
-                      w={150} h={150} 
-                      content="helmet_1.png"
-                      />
                 </motion.div>
             </motion.div>
         </>

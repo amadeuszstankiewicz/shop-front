@@ -27,7 +27,7 @@ export default function Hero() {
                 </div>
 
                 <DecorationImage
-                    x={9} y={19} 
+                    x={15} y={19} 
                     w={150} h={150} 
                     content="amulet_1.png"
                     />
