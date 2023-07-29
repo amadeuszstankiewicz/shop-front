@@ -7,17 +7,33 @@ import Footer from "@/components/Footer";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function Shop() {
+import { Product } from "@/components/models/Product";
+import { mongooseConnect } from "@/components/lib/mongoose";
+
+export default function Shop({products}) {
 
     return (
         <div className="relative overflow-hidden min-h-screen">
             <Header />
             <ShopHero />
             <Filters />
-            <ShopItems />
+            <ShopItems products={products}/>
             <Footer />
             <ToastContainer 
                 newestOnTop={true}/>
         </div>
     )
+}
+
+export async function getServerSideProps() {
+
+  await mongooseConnect();
+  const products = await Product.find()
+    .limit(20)
+
+  return {
+    props: { 
+        products: JSON.parse( JSON.stringify( products ) ) 
+    }
+  }
 }
