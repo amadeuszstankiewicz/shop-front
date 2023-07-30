@@ -44,6 +44,7 @@ export function CartContextProvider({children}) {
 
     function clearCart() {
         setCartProducts([])
+        realLocalStorage.setItem('cart', JSON.stringify([]))
     }
 
     return (

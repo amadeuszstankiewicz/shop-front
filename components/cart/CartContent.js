@@ -36,6 +36,8 @@ export default function CartContent() {
                         setTotalCart(total)
                     }
                 })
+        } else {
+            setProducts([])
         }
     }, [cartProducts])
 
@@ -131,10 +133,14 @@ export default function CartContent() {
                                         {products.map(product => (
                                             <tr key={product._id} className="">
                                                 <td className="w-24 h-24 px-2 py-3">
-                                                    <img src={product.images[0]} className="rounded" />
+                                                    <Link href={`/product/${product._id}`}>
+                                                        <img src={product.images[0]} className="rounded" />
+                                                    </Link>
                                                 </td>
                                                 <td className="px-2 font-bold">
-                                                    {product.title}
+                                                    <Link href={`/product/${product._id}`}>
+                                                        {product.title}
+                                                    </Link>
                                                 </td>
                                                 <td className="px-2 font-bold">
                                                     <div className="flex gap-1 items-center h-full">

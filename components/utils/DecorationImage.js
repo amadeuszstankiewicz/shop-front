@@ -4,7 +4,7 @@ function getRandomNumber(min, max) {
     return 50 + Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export default function DecorationImage({ x, y, w, h, content }) {
+export default function DecorationImage({ x, y, w, h, content, z }) {
     let leftPosition = 0
     let topPosition = 0
     let width = 0
@@ -68,7 +68,8 @@ export default function DecorationImage({ x, y, w, h, content }) {
             style={{left: leftPosition, top: topPosition,
                     width: width, height: height,
                     transition: "all 5s",
-                    transform: translate}}>
+                    transform: translate,
+                    zIndex: z}}>
             
             <div className="absolute glowing-particle z-2"
                 style={{transition: "all 5s",

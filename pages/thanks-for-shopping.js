@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from "react";
 import { CartContext } from "@/components/contexts/CartContext";
 import { useContext } from "react";
+import Link from "next/link";
 
 export default function Cart() {
     const { clearCart } = useContext(CartContext)
@@ -28,8 +29,13 @@ export default function Cart() {
                 </h1>
             </div>
             <div className="relative container mx-auto my-5 min-h-[calc(100vh-248px)]">
-                <div className="bg-white rounded p-5 mx-auto max-w-[720px]">
-                    <h2 className="h-fit py-8 text-2xl font-bold text-center">Order info</h2>
+                <div className="bg-white rounded p-5 mx-auto max-w-[720px] text-center">
+                    <h2 className="h-fit py-8 text-2xl font-bold text-center">Did you forget something?</h2>
+                    
+                    <Link href={'/shop'}
+                        className="rounded-full w-fit bg-cyan-500 text-white py-2 px-6 font-bold transition ease-linear hover:bg-cyan-400">
+                            Go to shop
+                    </Link>
                 </div>
             </div>
             <Footer />

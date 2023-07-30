@@ -3,6 +3,7 @@ import ProductBrick from "../ProductBrick";
 
 export default function ShopItems({products}) {
 
+    
   
     return (
         <div className="relative container mx-auto my-5 min-h-[calc(100vh-248px)]">

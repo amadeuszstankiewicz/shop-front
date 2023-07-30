@@ -3,6 +3,7 @@ import FigurineModel from "./FigurineModel";
 
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
+import Link from "next/link";
 
 export default function Figurine() {
     const [color, setColor] = useColor("hex", "#ffffff");
@@ -40,6 +41,9 @@ export default function Figurine() {
                             onClick={() => setShowColorpicker(true)}>
                             Change color
                         </button>
+                        <div className="absolute w-[230px] text-[10px] text-center text-white bottom-[-15px]">
+                            CC: <a href="https://sketchfab.com/guest2308" target="_blank">Metalhead7482</a>
+                        </div>
                     </div>
                 </div>
             }

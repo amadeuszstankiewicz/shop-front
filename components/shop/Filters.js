@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-
-export default function Filters() {
+export default function Filters({categories, onSortChange}) {
     const [selectedCategoryOption, setSelectedCategoryOption] = useState('');
     const [selectedSortOption, setSelectedSortOption] = useState('');
 
     const handleCategoryChange = (event) => {
         setSelectedCategoryOption(event.target.value);
+        onSortChange(selectedSortOption, event.target.value);
     };
     const handleSortChange = (event) => {
         setSelectedSortOption(event.target.value);
+        onSortChange(event.target.value, selectedCategoryOption);
     };
 
     return (
@@ -21,10 +22,11 @@ export default function Filters() {
                     onChange={handleCategoryChange}
                     >
                     <option>Choose a category</option>
-                    <option value="US">United States</option>
-                    <option value="CA">Canada</option>
-                    <option value="FR">France</option>
-                    <option value="DE">Germany</option>
+                    {
+                        categories.map(category => (
+                            <option key={category._id} value={category._id}>{category.name}</option>
+                        ))
+                    }
                 </select>
 
                 <select id="categories" 
@@ -33,10 +35,10 @@ export default function Filters() {
                     onChange={handleSortChange}
                     >
                     <option>Default sort</option>
-                    <option value="US">Sort by price (asc)</option>
-                    <option value="CA">Sort by price (desc)</option>
-                    <option value="FR">Sort by name (asc)</option>
-                    <option value="DE">Sort by name (desc)</option>
+                    <option value="price_asc">Sort by price (asc)</option>
+                    <option value="price_desc">Sort by price (desc)</option>
+                    <option value="title_asc">Sort by title (asc)</option>
+                    <option value="title_desc">Sort by title (desc)</option>
                 </select>
             </div>
         </div>

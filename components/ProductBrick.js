@@ -30,10 +30,12 @@ export default function ProductBrick({product}) {
     return (
         <div className="bg-white rounded-md m-5 flex flex-col align-center group">
             <Link href={`/product/${product._id}`} className="flex flex-col align-center group">
-                <img 
-                    className="max-w-screen h-auto p-5 transition ease-linear group-hover:scale-110" 
-                    src="/images/hero-bg.png" 
-                />
+                <div className="m-5 h-[250px] overflow-hidden">
+                    <img 
+                        className="h-full w-auto rounded mx-auto transition ease-linear group-hover:scale-110" 
+                        src={`${product.images[0]}`} 
+                    />
+                </div>
 
                 <div className="text-center text-xl font-bold">
                     {product.title}
