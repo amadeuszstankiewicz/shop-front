@@ -75,10 +75,7 @@ export default function ProductPage({product}) {
                     </div>
                     <div className="w-full p-5 sm:w-1/2">
                         <div className="relative h-fit bg-zinc-300 p-5 text-black rounded-lg drop-shadow-xl">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
-                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
-                            Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                            {product.description}
                             <div className="flex mt-4 justify-center items-center gap-3">
                                 <div className="text-2xl font-bold">
                                     {product.price}$
