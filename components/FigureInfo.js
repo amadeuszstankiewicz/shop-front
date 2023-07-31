@@ -84,7 +84,7 @@ export default function FigureInfo() {
                       <strong>Embark on Epic Adventures with Exquisite DnD Figurines!</strong>
                     </div>
                     <p>
-                      Step into the mystical world of Dungeons and Dragons with our handcrafted figurines. Each figurine is meticulously crafted to bring your favorite characters to life, capturing every detail and essence of their personalities. Whether you're a seasoned adventurer or a new player, these figurines are the perfect companions for your tabletop campaigns. From fierce dragons to brave heroes, our collection offers an array of choices to enhance your gaming experience. Unleash your imagination and add a touch of magic to your tabletop adventures with our premium DnD figurines!
+                      Step into the mystical world of Dungeons and Dragons with our handcrafted figurines. Each figurine is meticulously crafted to bring your favorite characters to life, capturing every detail and essence of their personalities. Whether you&apos;re a seasoned adventurer or a new player, these figurines are the perfect companions for your tabletop campaigns. From fierce dragons to brave heroes, our collection offers an array of choices to enhance your gaming experience. Unleash your imagination and add a touch of magic to your tabletop adventures with our premium DnD figurines!
                     </p>
                   
                     <DecorationImage
@@ -113,7 +113,7 @@ export default function FigureInfo() {
                       <strong>Unparalleled Quality, Unmatched Collectibles!</strong>
                     </div>
                     <p>
-                      At Fantasy Figurines, we take pride in curating the finest DnD figurines from renowned artists and manufacturers. Our commitment to quality ensures that each piece is a work of art worthy of display in any collector's showcase. Each figurine is made from premium materials, carefully painted with stunning attention to detail, and packaged securely to reach you in pristine condition. These figurines not only enhance your gaming sessions but also become cherished collectibles that stand the test of time. Discover the joy of owning masterfully crafted DnD figurines that will impress both you and your fellow adventurers!
+                      At Fantasy Figurines, we take pride in curating the finest DnD figurines from renowned artists and manufacturers. Our commitment to quality ensures that each piece is a work of art worthy of display in any collector&apos;s showcase. Each figurine is made from premium materials, carefully painted with stunning attention to detail, and packaged securely to reach you in pristine condition. These figurines not only enhance your gaming sessions but also become cherished collectibles that stand the test of time. Discover the joy of owning masterfully crafted DnD figurines that will impress both you and your fellow adventurers!
                     </p>
                     <DecorationImage
                       x={-125} y={10} 
@@ -141,7 +141,7 @@ export default function FigureInfo() {
                       <strong>The Perfect Gift for DnD Enthusiasts!</strong>
                     </div>
                     <p>
-                      Looking for a gift that will delight any Dungeons and Dragons enthusiast? Our DnD figurines make unforgettable presents for birthdays, holidays, or any special occasion. Give the gift of imagination and adventure, letting your loved ones bring their favorite characters to life on the tabletop. Whether they're a dungeon master or a devoted player, these figurines will be treasured additions to their collection. With our diverse selection, finding the perfect figurine for your recipient has never been easier. Get ready to witness their eyes light up with joy when they unwrap the magic of our DnD figurines!
+                      Looking for a gift that will delight any Dungeons and Dragons enthusiast? Our DnD figurines make unforgettable presents for birthdays, holidays, or any special occasion. Give the gift of imagination and adventure, letting your loved ones bring their favorite characters to life on the tabletop. Whether they&apos;re a dungeon master or a devoted player, these figurines will be treasured additions to their collection. With our diverse selection, finding the perfect figurine for your recipient has never been easier. Get ready to witness their eyes light up with joy when they unwrap the magic of our DnD figurines!
                     </p>
                     <DecorationImage
                       x={310} y={10} 
