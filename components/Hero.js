@@ -1,9 +1,10 @@
 import Figurine from "./Figurine";
+import useWidth from "./hooks/useWidth";
 import DecorationImage from "./utils/DecorationImage";
 
 
 export default function Hero() {
-
+    const screenWidth = useWidth();
 
     return (
         <>
@@ -38,7 +39,14 @@ export default function Hero() {
                     content="shield_2.png"
                     />
             </div>
-            <Figurine />
+
+            {
+                screenWidth > 1023 ? (
+                    <Figurine />
+                ) : (
+                    null
+                )
+            }
         </>
     )
 }

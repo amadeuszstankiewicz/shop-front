@@ -23,6 +23,17 @@ export default function CartContent() {
 
     const [placeOrderLoader, setPlaceOrderLoader] = useState(false)
 
+    
+    const [formErrors, setFormErrors] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        country: '',
+        city: '',
+        postalCode: '',
+        address: ''
+    });
+
     useEffect(() => {
         if(cartProducts.length > 0) {
             axios.post('/api/cart', {cartIds: cartProducts})
@@ -75,23 +86,79 @@ export default function CartContent() {
     }
 
     async function placeOrder() {
-
         setPlaceOrderLoader(true)
-        const res = await axios.post('/api/checkout', {
-            first_name: firstName, 
-            last_name: lastName, 
-            email, 
-            country, 
-            city, 
-            postal_code: postalCode, 
-            address, 
-            products: cartProducts.join(',')
-        })
-        setPlaceOrderLoader(false)
 
-        if(res.data.url) {
-            window.location = res.data.url;
+        let validateForm = true;
+        let tempFormErrors = {}
+        if(firstName == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                firstName: "This field is required.",
+            };
+            validateForm = false;
         }
+        if(lastName == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                lastName: "This field is required.",
+            };
+            validateForm = false;
+        }
+        if(email == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                email: "This field is required.",
+            };
+            validateForm = false;
+        }
+        if(country == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                country: "This field is required.",
+            };
+            validateForm = false;
+        }
+        if(city == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                city: "This field is required.",
+            };
+            validateForm = false;
+        }
+        if(postalCode == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                postalCode: "This field is required.",
+            };
+            validateForm = false;
+        }
+        if(address == '') {
+            tempFormErrors = {
+                ...tempFormErrors,
+                address: "This field is required.",
+            };
+            validateForm = false;
+        }
+        setFormErrors(tempFormErrors)
+        
+        if(validateForm) {
+            const res = await axios.post('/api/checkout', {
+                first_name: firstName, 
+                last_name: lastName, 
+                email, 
+                country, 
+                city, 
+                postal_code: postalCode, 
+                address, 
+                products: cartProducts.join(',')
+            })
+    
+            if(res.data.url) {
+                window.location = res.data.url;
+            }
+        }
+
+        setPlaceOrderLoader(false)
     }
 
     return (
@@ -211,42 +278,91 @@ export default function CartContent() {
                                     value={firstName}
                                     onChange={e => setFirstName(e.target.value)}
                                     />
+                                {
+                                    formErrors.firstName ? (
+                                        <div className="text-red-500 text-sm">{formErrors.firstName}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 <input 
                                     type="text" name="last_name" placeholder="Last name*"
                                     className="bg-slate-100 w-full rounded p-2 border-solid border-2 border-slate-300"
                                     value={lastName}
                                     onChange={e => setLastName(e.target.value)}
                                     />
+                                {
+                                    formErrors.lastName ? (
+                                        <div className="text-red-500 text-sm">{formErrors.lastName}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 <input 
                                     type="text" name="email" placeholder="Email*"
                                     className="bg-slate-100 w-full rounded p-2 border-solid border-2 border-slate-300"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
                                     />
+                                {
+                                    formErrors.email ? (
+                                        <div className="text-red-500 text-sm">{formErrors.email}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 <input 
                                     type="text" name="country" placeholder="Country*"
                                     className="bg-slate-100 w-full rounded p-2 border-solid border-2 border-slate-300"
                                     value={country}
                                     onChange={e => setCountry(e.target.value)}
                                     />
+                                {
+                                    formErrors.country ? (
+                                        <div className="text-red-500 text-sm">{formErrors.country}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 <input 
                                     type="text" name="city" placeholder="City*"
                                     className="bg-slate-100 w-full rounded p-2 border-solid border-2 border-slate-300"
                                     value={city}
                                     onChange={e => setCity(e.target.value)}
                                     />
+                                {
+                                    formErrors.city ? (
+                                        <div className="text-red-500 text-sm">{formErrors.city}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 <input 
                                     type="text" name="postal_code" placeholder="Postal*"
                                     className="bg-slate-100 w-full rounded p-2 border-solid border-2 border-slate-300"
                                     value={postalCode}
                                     onChange={e => setPostalCode(e.target.value)}
                                     />
+                                {
+                                    formErrors.postalCode ? (
+                                        <div className="text-red-500 text-sm">{formErrors.postalCode}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 <input 
                                     type="text" name="address" placeholder="Street Address*"
                                     className="bg-slate-100 w-full rounded p-2 border-solid border-2 border-slate-300"
                                     value={address}
                                     onChange={e => setAddress(e.target.value)}
                                     />
+                                {
+                                    formErrors.address ? (
+                                        <div className="text-red-500 text-sm">{formErrors.address}</div>
+                                    ) : (
+                                        null
+                                    )
+                                }
                                 
                                 <input type="hidden" name="products" value={cartProducts.join(',')} />
                                 
