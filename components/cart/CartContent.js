@@ -60,6 +60,7 @@ export default function CartContent() {
 
     function removeFromCart(title, id) {
         removeProduct(id)
+        console.log('remove', id)
         
         toast.info(<Link href={'/cart'}><strong>{title}</strong> successfully removed from cart.</Link>, {
             position: "top-right",

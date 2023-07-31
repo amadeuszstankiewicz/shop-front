@@ -25,6 +25,8 @@ export function CartContextProvider({children}) {
     useEffect(() => {
         if( cartProducts?.length > 0 ) {
             realLocalStorage.setItem('cart', JSON.stringify(cartProducts))
+        } else {
+            realLocalStorage.removeItem('cart')
         }
     }, [cartProducts])
 
