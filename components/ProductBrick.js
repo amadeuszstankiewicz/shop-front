@@ -34,6 +34,7 @@ export default function ProductBrick({product}) {
                     <img 
                         className="h-full w-auto rounded mx-auto transition ease-linear group-hover:scale-110" 
                         src={`${product.images[0]}`} 
+                        alt=""
                     />
                 </div>
 

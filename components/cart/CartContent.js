@@ -134,7 +134,7 @@ export default function CartContent() {
                                             <tr key={product._id} className="">
                                                 <td className="w-24 h-24 px-2 py-3">
                                                     <Link href={`/product/${product._id}`}>
-                                                        <img src={product.images[0]} className="rounded" />
+                                                        <img src={product.images[0]} className="rounded" alt="" />
                                                     </Link>
                                                 </td>
                                                 <td className="px-2 font-bold">

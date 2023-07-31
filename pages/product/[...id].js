@@ -71,6 +71,7 @@ export default function ProductPage({product}) {
                         <img 
                             className="max-h-[500px] w-auto rounded-lg mx-auto transition ease-linear group-hover:scale-110" 
                             src={`${product.images[0]}`} 
+                            alt=""
                         />
                     </div>
                     <div className="w-full p-5 sm:w-1/2">

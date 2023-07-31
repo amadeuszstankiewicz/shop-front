@@ -74,7 +74,7 @@ export default function DecorationImage({ x, y, w, h, content, z }) {
             <div className="absolute glowing-particle z-2"
                 style={{transition: "all 5s",
                         top: particle1.top, left: particle1.left}}></div>
-            <img className="z-5" src={'/decoration/' + content} />
+            <img className="z-5" src={'/decoration/' + content}  alt=""/>
             <div className="absolute glowing-particle z-10"
                 style={{transition: "all 5s",
                         top: particle2.top, left: particle2.left}}></div>
