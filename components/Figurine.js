@@ -14,6 +14,17 @@ export default function Figurine() {
         setFigurineColor('0x' + color?.hex?.replace(/#/g, ""))
         setShowColorpicker(false)
     }
+
+    const [isServer, setIsServer] = useState(true);
+
+    useEffect(() => {
+        setIsServer(false);
+    }, []);
+  
+    if (isServer) {
+        return null; // Return null on the server-side to prevent rendering WebGL components
+    }
+    
     return (
         <div className="fixed hidden h-full w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 lg:block">
             <FigurineModel figurineColor={figurineColor}/>

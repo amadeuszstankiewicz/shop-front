@@ -12,6 +12,7 @@ import Link from "next/link";
 import DecorationImage from "@/components/utils/DecorationImage";
 import { useEffect } from "react";
 import { useState } from "react";
+import Head from "next/head";
 
 function getRandomElementFromArray(array) {
     if (!Array.isArray(array) || array.length === 0) {
@@ -61,6 +62,9 @@ export default function ProductPage({product}) {
 
     return (
         <div className="relative overflow-hidden min-h-screen">
+            <Head>
+                <title>Fantasy Figurines - {product?.title}</title>
+            </Head>
             <Header />
 
             <div className="relative container mx-auto py-5 mt-[68px] min-h-[calc(100vh-148px)]">

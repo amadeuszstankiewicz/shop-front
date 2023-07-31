@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { CartContext } from "@/components/contexts/CartContext";
 import { useContext } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Cart() {
     const { clearCart } = useContext(CartContext)
@@ -19,6 +20,9 @@ export default function Cart() {
 
     return (
         <div className="relative overflow-hidden min-h-screen">
+            <Head>
+                <title>Fantasy Figurines - Thanks for shopping!</title>
+            </Head>
             <Header />
             <div className="relative min-h-[180px] flex items-center justify-center mt-[68px]">
                 <div className="absolute w-full h-[180px] overflow-hidden z-0">

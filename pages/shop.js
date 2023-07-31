@@ -12,6 +12,7 @@ import { mongooseConnect } from "@/components/lib/mongoose";
 import { Category } from "@/components/models/Category";
 import { useState } from "react";
 import axios from "axios";
+import Head from "next/head";
 
 
 export default function Shop({products, categories}) {
@@ -26,6 +27,9 @@ export default function Shop({products, categories}) {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
+      <Head>
+          <title>Fantasy Figurines - Shop</title>
+      </Head>
       <Header />
       <ShopHero />
       <Filters 

@@ -9,10 +9,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Product } from "@/components/models/Product";
+import Head from "next/head";
 
 export default function Home({ latestProducts }) {
+
   return (
     <div className="relative overflow-hidden">
+      <Head>
+        <title>Fantasy Figurines</title>
+      </Head>
       <Header />
       <Hero />
       <FigureInfo />
