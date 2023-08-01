@@ -11,7 +11,7 @@ export default function Hero() {
             <div className="relative">
                 <div className="relative w-full min-h-screen z-0 flex items-center">
                     <div className="container hero-image-container w-fit h-fit relative mx-auto z-1">
-                        <img className="max-h-screen w-auto" src="/images/hero-bg.png" alt="" />
+                        <img className="max-h-screen w-auto" src="/images/hero-bg.webp" alt="" />
                         <img className="absolute top-0 right-0 h-3/4 w-auto" src="/images/hero-dragon.png" alt="" />
                     </div>
                 </div>
