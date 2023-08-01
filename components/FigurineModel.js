@@ -1,10 +1,9 @@
 
-import React, { Suspense, useEffect, useRef } from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three';
 import useScrollPosition from './hooks/useScrollPosition';
-import { useState } from 'react';
 
 export function Model(props) {
     const { nodes, materials } = useGLTF('/models/scene.gltf')
@@ -21,16 +20,16 @@ export function Model(props) {
     )
 }
 
-useGLTF.preload('/models/scene.gltf')
+//useGLTF.preload('/models/scene.gltf')
 
 export default function FigurineModel({figurineColor}) {
     return (
-        <Canvas camera={{ position: [0, 1, 4] }} penumbra={1}>
-            <ambientLight intensity={0.2}/>
-            <spotLight intensity={0.5} position={[300, 300, 2000]} />
-                <Suspense fallback={null}>
+        <Suspense fallback={<div>loading</div>}>
+            <Canvas camera={{ position: [0, 1, 4] }} penumbra={1}>
+                <ambientLight intensity={0.2}/>
+                <spotLight intensity={0.5} position={[300, 300, 2000]} />
                     <Model figurineColor={figurineColor}/>
-                </Suspense>
-        </Canvas>
+            </Canvas>
+        </Suspense>
     )
 }
