@@ -4,6 +4,7 @@ import FigurineModel from "./FigurineModel";
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
 import Link from "next/link";
+import { Suspense } from "react";
 
 export default function Figurine() {
     const [color, setColor] = useColor("hex", "#ffffff");
@@ -27,7 +28,9 @@ export default function Figurine() {
     
     return (
         <div className="fixed hidden h-full w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 lg:block">
-            <FigurineModel figurineColor={figurineColor}/>
+            <Suspense fallback={<p>Loading...</p>}>
+                <FigurineModel figurineColor={figurineColor}/>
+            </Suspense>
             {showColorpicker ?
                     <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                         <ColorPicker 
